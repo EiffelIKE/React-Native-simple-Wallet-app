@@ -50,7 +50,7 @@ const Welcome : FC = () => {
           <SmallText textStyles={{width: '70%', marginBottom: 25}}>
             Best payment methods, connects your money to your friends or family!
           </SmallText>
-          <RegularButton onPress={() => {}}>
+          <RegularButton onPress={() => {alert("pushed!")}}>
             Get Started!
           </RegularButton>
         </BottomSection>
