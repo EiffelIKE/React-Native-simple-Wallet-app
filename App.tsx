@@ -8,32 +8,24 @@ export default function App() {
     'Inter-Bold': require('./assets/fonts/Inter-Bold.otf'),
     'Inter-Regular': require('./assets/fonts/Inter-Regular.otf')
   })
-
+  
   const onFinish = async () => {
 		if (fontsLoaded) {
 			await SplashScreen.hideAsync();
 		}
 	};
 
-  useEffect(()=>{
-    const prepare = async () => {
-      await SplashScreen.preventAutoHideAsync()
-    }
-    prepare()
-  },[])
-
-
+  useEffect(() => {
+		async function prepare() {
+			await SplashScreen.preventAutoHideAsync();
+		}
+		prepare();
+	}, []);
 
 	useEffect(() => {
 		onFinish();
 	}, [fontsLoaded]);
-
-
-  if(!fontsLoaded) {
-    return null
-  }
-
-  return (
-    <Welcome/>
-  );
+  
+  if (fontsLoaded) return <Welcome/>;
+	else return null;
 }
