@@ -39,6 +39,7 @@ const RootStack: FC = () => {
           headerRight: () => (
             <Profile 
               img={avatar}
+              imgStyle={{resizeMode: "cover"}}
               imgContainerStyle={{
                 backgroundColor: colors.lightBlue
               }}
