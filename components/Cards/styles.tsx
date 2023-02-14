@@ -7,7 +7,6 @@ export const CardBackGround = styled.ImageBackground`
   width: ${ScreenWidth * 0.71}px;
   background-color: ${colors.accent};
   border-radius: 25px;
-  margin-right: 25px;
   overflow: hidden;
 `
 

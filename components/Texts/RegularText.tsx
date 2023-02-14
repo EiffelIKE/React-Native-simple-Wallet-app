@@ -14,7 +14,7 @@ const StyledText = styled.Text`
 export const RegularText: FC<TextProps> = (props) => {
   return (
     <>
-      <StyledText style={props.textStyles}>
+      <StyledText onPress={props.onPress} style={props.textStyles}>
         {props.children}
       </StyledText>
     </>

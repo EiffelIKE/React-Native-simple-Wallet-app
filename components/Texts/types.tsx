@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
-import { StyleProp, TextStyle } from "react-native";
+import { StyleProp, TextStyle, TextProps as RNTextProps } from "react-native";
 
-export interface TextProps {
+export interface TextProps extends RNTextProps {
   textStyles?: StyleProp<TextStyle>;
   children: ReactNode
 }

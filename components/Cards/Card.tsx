@@ -10,11 +10,11 @@ const Card: FC<CardProps> = (props) => {
   const handlePress = () => {};
 
   return (
-    <CardBackGround source={cardBg} imageStyle={{ resizeMode: "cover" }}>
+    <CardBackGround source={cardBg} imageStyle={{ resizeMode: "cover"}} style={!props.noMargin && {marginRight: 25}}>
       <CardTouch underlayColor={colors.darkBlue} onPress={() => handlePress()}>
         <TouchView>
           <CardRow>
-            <RegularText>******{props.accountNum.slice(6, 10)}</RegularText>
+            <RegularText>******{props?.accountNum?.slice(6, 10)}</RegularText>
           </CardRow>
           <CardRow>
             <View style={{ flex: 3 }}>
@@ -24,10 +24,10 @@ const Card: FC<CardProps> = (props) => {
                 Total balance
               </SmallText>
               <RegularText textStyles={{ fontSize: 19 }}>
-                $ {props.balance}
+                $ {props?.balance}
               </RegularText>
             </View>
-            <Logo source={props.logo} style={{ resizeMode: "contain" }} />
+            <Logo source={props?.logo} style={{ resizeMode: "contain" }} />
           </CardRow>
         </TouchView>
       </CardTouch>
