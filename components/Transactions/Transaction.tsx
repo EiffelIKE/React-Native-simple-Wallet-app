@@ -1,24 +1,24 @@
-import {FC} from 'react';
-import { View } from 'react-native';
-import { TransactionProps } from './types';
-import { RegularText, SmallText } from '../Texts';
-import { colors } from '../../theme/colors';
-import { TransactionRow, LeftView, RightView } from './styles';
-import TransactionIcon from './TransactionIcon';
+import { FC } from "react";
+import { View } from "react-native";
+import { TransactionProps } from "./types";
+import { RegularText, SmallText } from "../Texts";
+import { colors } from "../../theme/colors";
+import { TransactionRow, LeftView, RightView } from "./styles";
+import TransactionIcon from "./TransactionIcon";
 
 const Transaction: FC<TransactionProps> = (props) => {
   return (
-    <TransactionRow style={{marginBottom: 25}}>
+    <TransactionRow style={{ marginBottom: 25 }}>
       <LeftView>
         <TransactionIcon
           background={props.art.background}
           icon={props.art.icon}
         />
-        <View style={{marginLeft: 10}}>
+        <View style={{ marginLeft: 10 }}>
           <RegularText
             textStyles={{
               color: colors.darkBlue,
-              textAlign: 'left',
+              textAlign: "left",
               marginBottom: 5,
             }}
           >
@@ -27,7 +27,7 @@ const Transaction: FC<TransactionProps> = (props) => {
           <SmallText
             textStyles={{
               color: colors.grayDark,
-              textAlign: 'left',
+              textAlign: "left",
             }}
           >
             {props.subtitle}
@@ -35,26 +35,26 @@ const Transaction: FC<TransactionProps> = (props) => {
         </View>
       </LeftView>
       <RightView>
-      <RegularText
-            textStyles={{
-              color: colors.darkBlue,
-              textAlign: 'right',
-              marginBottom: 5,
-            }}
-          >
-            {props.amount}
-          </RegularText>
-          <SmallText
-            textStyles={{
-              textAlign: 'right',
-              color: colors.grayDark,
-            }}
-          >
-            {props.date}
-          </SmallText>
+        <RegularText
+          textStyles={{
+            color: colors.darkBlue,
+            textAlign: "right",
+            marginBottom: 5,
+          }}
+        >
+          {props.amount}
+        </RegularText>
+        <SmallText
+          textStyles={{
+            textAlign: "right",
+            color: colors.grayDark,
+          }}
+        >
+          {props.date}
+        </SmallText>
       </RightView>
     </TransactionRow>
-  )
-}
+  );
+};
 
-export default Transaction
+export default Transaction;
