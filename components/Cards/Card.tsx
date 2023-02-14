@@ -3,46 +3,36 @@ import { View } from "react-native";
 import { CardProps } from "./types";
 import { colors } from "../../theme/colors";
 import { RegularText, SmallText } from "../Texts";
-import { 
-  CardBackGround,
-  CardTouch,
-  CardRow,
-  TouchView,
-  Logo
-} from "./styles";
-import cardBg from '../../assets/backgrounds/bg_transparent.png'
+import { CardBackGround, CardTouch, CardRow, TouchView, Logo } from "./styles";
+import cardBg from "../../assets/backgrounds/bg_transparent.png";
 
 const Card: FC<CardProps> = (props) => {
-  const handlePress = () => {}
+  const handlePress = () => {};
 
   return (
-    <CardBackGround source={cardBg} imageStyle={{resizeMode: 'cover'}} >
-      <CardTouch underlayColor={colors.darkBlue} onPress={() => handlePress()} >
+    <CardBackGround source={cardBg} imageStyle={{ resizeMode: "cover" }}>
+      <CardTouch underlayColor={colors.darkBlue} onPress={() => handlePress()}>
         <TouchView>
           <CardRow>
-            <RegularText>
-              ******{props.accountNum.slice(6,10)}
-            </RegularText>
+            <RegularText>******{props.accountNum.slice(6, 10)}</RegularText>
           </CardRow>
           <CardRow>
-            <View style={{flex: 3}}>
+            <View style={{ flex: 3 }}>
               <SmallText
-                textStyles={{marginBottom: 5, color: colors.grayLight}}
+                textStyles={{ marginBottom: 5, color: colors.grayLight }}
               >
                 Total balance
               </SmallText>
-              <RegularText
-                textStyles={{fontSize: 19}}
-              >
+              <RegularText textStyles={{ fontSize: 19 }}>
                 $ {props.balance}
               </RegularText>
             </View>
-            <Logo source={props.logo} style={{resizeMode: 'contain'}} />
+            <Logo source={props.logo} style={{ resizeMode: "contain" }} />
           </CardRow>
         </TouchView>
       </CardTouch>
-    </CardBackGround> 
-  )
-}
+    </CardBackGround>
+  );
+};
 
-export default Card
+export default Card;

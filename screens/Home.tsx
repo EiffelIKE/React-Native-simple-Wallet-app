@@ -4,7 +4,8 @@ import styled from 'styled-components/native';
 import { Container } from '../shared/shared';
 import { colors } from '../theme/colors';
 import CardSection from '../components/Cards/CardSection';
-import { cardsData } from '../utils/const/cardsData';
+import { cardsData, transactionsData } from '../utils/const';
+import TransactionSection from '../components/Transactions/TransactionSetion';
 
 const HomeContainer = styled(Container)`
   background-color: ${colors.grayLight};
@@ -16,6 +17,7 @@ const Home: FC = () => {
     <HomeContainer>
       <StatusBar style='dark' />
       <CardSection data={cardsData} />
+      <TransactionSection data={transactionsData} />
     </HomeContainer>
   )
 }

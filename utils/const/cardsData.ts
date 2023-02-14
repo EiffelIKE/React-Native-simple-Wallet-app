@@ -12,14 +12,14 @@ export const cardsData = [
   {
     id: 2,
     accountNum: "987654321",
-    balance: 200000,
+    balance: 20000,
     alias: "Personal Work",
     logo: logo2,
   },
   {
     id: 3,
     accountNum: "987654587",
-    balance: 300000,
+    balance: 300,
     alias: "School Fees",
     logo: logo2,
   },
