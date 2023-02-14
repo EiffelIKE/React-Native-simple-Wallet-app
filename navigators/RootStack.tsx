@@ -49,7 +49,7 @@ const RootStack: FC = () => {
             />
           ),
         }}
-        initialRouteName="Balance"
+        initialRouteName="Welcome"
       >
         <Stack.Screen
           name="Welcome"

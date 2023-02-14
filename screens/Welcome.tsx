@@ -7,8 +7,12 @@ import { Container } from "../shared/shared";
 import { BigText } from "../components/Texts/BigText";
 import { SmallText } from "../components/Texts/SmallText";
 import { RegularButton } from "../components/Buttons/RegularButton";
+import { RootStackProps } from "../navigators/RootStack";
+import { StackScreenProps } from "@react-navigation/stack";
 
-import topBg from '../assets/backgrounds/bg.png'
+import topBg from "../assets/backgrounds/bg.png";
+
+type Props = StackScreenProps<RootStackProps, 'Welcome'>
 
 const WelcomeContainer = styled(Container)`
   background-color: ${colors.darkBlue};
@@ -35,28 +39,32 @@ const TopImage = styled.Image`
   height: 100%;
 `;
 
-const Welcome : FC = () => {
-  return(
+const Welcome: FC<Props> = ({navigation}) => {
+  return (
     <>
-      <StatusBar style="light"/>
+      <StatusBar style="light" />
       <WelcomeContainer>
         <TopSection>
-          <TopImage  source={topBg} style={{resizeMode: 'stretch'}} />
+          <TopImage source={topBg} style={{ resizeMode: "stretch" }} />
         </TopSection>
         <BottomSection>
-          <BigText textStyles={{width: '70%', marginBottom: 25}}>
+          <BigText textStyles={{ width: "70%", marginBottom: 25 }}>
             Best Way to track your money
           </BigText>
-          <SmallText textStyles={{width: '70%', marginBottom: 25}}>
+          <SmallText textStyles={{ width: "70%", marginBottom: 25 }}>
             Best payment methods, connects your money to your friends or family!
           </SmallText>
-          <RegularButton onPress={() => {alert("pushed!")}}>
+          <RegularButton
+            onPress={() => {
+              navigation.navigate("Home");
+            }}
+          >
             Get Started!
           </RegularButton>
         </BottomSection>
       </WelcomeContainer>
     </>
-  )
-}
+  );
+};
 
-export default Welcome
+export default Welcome;

@@ -7,11 +7,10 @@ import { CardBackGround, CardTouch, CardRow, TouchView, Logo } from "./styles";
 import cardBg from "../../assets/backgrounds/bg_transparent.png";
 
 const Card: FC<CardProps> = (props) => {
-  const handlePress = () => {};
 
   return (
     <CardBackGround source={cardBg} imageStyle={{ resizeMode: "cover"}} style={!props.noMargin && {marginRight: 25}}>
-      <CardTouch underlayColor={colors.darkBlue} onPress={() => handlePress()}>
+      <CardTouch underlayColor={colors.darkBlue} onPress={() => props.onPress ? props.onPress(props.id) : {}}>
         <TouchView>
           <CardRow>
             <RegularText>******{props?.accountNum?.slice(6, 10)}</RegularText>

@@ -5,3 +5,7 @@ export interface AmountProps {
 }
 
 export interface BalanceProps extends CardProps {}
+
+export interface ButtonSectionProps {
+  onPress: () => void
+}
