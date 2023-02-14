@@ -4,7 +4,7 @@ export const transactionsData = [
   {
     id: 1,
     amount: "-$1500",
-    date: "12/12/2020",
+    date: "12/11/2022",
     title: "Travel",
     subtitle: "Air USA",
     art: {
@@ -15,7 +15,7 @@ export const transactionsData = [
   {
     id: 2,
     amount: "-$40",
-    date: "12/12/2020",
+    date: "22/12/2022",
     title: "Taxi",
     subtitle: "Uber",
     art: {
@@ -26,7 +26,7 @@ export const transactionsData = [
   {
     id: 3,
     amount: "-$100",
-    date: "12/12/2020",
+    date: "12/1/2023",
     title: "Shopping",
     subtitle: "Amazon",
     art: {
