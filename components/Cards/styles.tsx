@@ -3,8 +3,8 @@ import { colors } from "../../theme/colors";
 import { ScreenWidth } from "../../shared/shared";
 
 export const CardBackGround = styled.ImageBackground`
-  height: 89%;
-  width: ${ScreenWidth * 0.75}px;
+  height: 91%;
+  width: ${ScreenWidth * 0.72}px;
   background-color: ${colors.accent};
   border-radius: 25px;
   margin-right: 25px;
