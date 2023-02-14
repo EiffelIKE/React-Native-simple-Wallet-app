@@ -14,26 +14,26 @@ import Transaction from "./Transaction";
 const TransactionSection: FC<TransactionSectionProps> = (props) => {
   return (
     <TransactionBackground>
-      <TransactionRow style={{marginBottom: 25}}>
-        <RegularText textStyles={{fontSize: 19, color: colors.darkBlue}}>
+      <TransactionRow style={{ marginBottom: 25 }}>
+        <RegularText textStyles={{ fontSize: 19, color: colors.darkBlue }}>
           Transaction
         </RegularText>
-        <SmallText textStyles={{color: colors.darkBlue}} >
+        <SmallText textStyles={{ color: colors.darkBlue }}>
           Recent
           <Ionicons name="caret-down" size={13} color={colors.grayDark} />
         </SmallText>
       </TransactionRow>
-      <TransactionList 
+      <TransactionList
         data={props.data}
         showsVerticalScrollIndicator={false}
         contentContainerStyle={{
           paddingBottom: 25,
         }}
-        keyExtractor={({id} : any) => id.toString()}
-        renderItem={({item}: any ) => <Transaction {...item} />}
+        keyExtractor={({ id }: any) => id.toString()}
+        renderItem={({ item }: any) => <Transaction {...item} />}
       />
     </TransactionBackground>
-  )
+  );
 };
 
 export default TransactionSection;

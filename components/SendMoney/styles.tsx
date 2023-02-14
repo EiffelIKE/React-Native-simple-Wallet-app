@@ -6,7 +6,7 @@ export const SendMoneySectionBg = styled.View`
   width: 100%;
   padding-top: 15px;
   background-color: ${colors.white};
-`
+`;
 
 export const SendMoneyRow = styled.View`
   flex-direction: row;
@@ -14,16 +14,16 @@ export const SendMoneyRow = styled.View`
   align-items: center;
   width: 100%;
   padding: 0 25px;
-`
+`;
 
 export const SendMoneyList = styled.FlatList`
   width: 100%;
   flex: auto;
   min-height: 80%;
   padding: 0 25px;
-`
+`;
 
-export const TextButton = styled.TouchableOpacity``
+export const TextButton = styled.TouchableOpacity``;
 
 export const SendMoneyContainer = styled.TouchableHighlight`
   height: 130px;
@@ -32,4 +32,4 @@ export const SendMoneyContainer = styled.TouchableHighlight`
   border-radius: 15px;
   justify-content: space-around;
   margin: 0 10px 10px 0;
-`
+`;
