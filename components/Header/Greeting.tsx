@@ -2,8 +2,7 @@ import { FC } from "react";
 import styled from "styled-components/native";
 import { StyleProp, TextStyle } from "react-native";
 import { colors } from "../../theme/colors";
-import { RegularText } from "../Texts/RegularText";
-import { SmallText } from "../Texts/SmallText";
+import { RegularText, SmallText } from "../Texts";
 
 const StyledView = styled.View`
   flex-direction: column;

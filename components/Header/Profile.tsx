@@ -7,21 +7,7 @@ import {
   ViewStyle,
   ImageStyle,
 } from "react-native";
-import { colors } from "../../theme/colors";
-import { RegularText } from "../Texts/RegularText";
-import { SmallText } from "../Texts/SmallText";
-
-const StyledView = styled.TouchableOpacity`
-  flex-direction: column;
-  height: 45px;
-  width: 45px;
-  border-radius: 15px;
-`;
-const StyledImg = styled.Image`
-  width: 100%;
-  height: 100%;
-  border-radius: 15px;
-`;
+import { StyledView, StyledImg } from "./styles";
 
 interface ProfileProps {
   img: ImageSourcePropType;

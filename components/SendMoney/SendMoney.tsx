@@ -14,16 +14,22 @@ const SendMoney: FC<SendMoneyProps> = (props) => {
     >
       <>
         <Profile img={props.img} imgContainerStyle={{ marginBottom: 10 }} />
-        <SmallText textStyles={{
-          textAlign: 'left',
-          color: colors.white,
-          fontSize: 12,
-        }}>{props.name}</SmallText>
-        <RegularText textStyles={{
-          textAlign: 'left',
-          color: colors.white,
-          fontSize: 13,
-        }}>
+        <SmallText
+          textStyles={{
+            textAlign: "left",
+            color: colors.white,
+            fontSize: 12,
+          }}
+        >
+          {props.name}
+        </SmallText>
+        <RegularText
+          textStyles={{
+            textAlign: "left",
+            color: colors.white,
+            fontSize: 13,
+          }}
+        >
           {props.amount}
         </RegularText>
       </>

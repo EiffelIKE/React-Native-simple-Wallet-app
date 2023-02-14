@@ -7,58 +7,58 @@ import { colors } from "../theme/colors";
 import Greeting from "../components/Header/Greeting";
 import Profile from "../components/Header/Profile";
 
-import avatar from '../assets/avatar/avatar.png'
+import avatar from "../assets/avatar/avatar.png";
 
 export type RootStackProps = {
-  Welcome: undefined ;
-  Home: undefined
-}
+  Welcome: undefined;
+  Home: undefined;
+};
 
-const Stack = createStackNavigator<RootStackProps>()
+const Stack = createStackNavigator<RootStackProps>();
 
 const RootStack: FC = () => {
   return (
     <NavigationContainer>
-      <Stack.Navigator    
+      <Stack.Navigator
         screenOptions={{
           headerStyle: {
             backgroundColor: colors.grayLight,
             borderBottomWidth: 0,
-            shadowColor: 'transparent',
+            shadowColor: "transparent",
             shadowOpacity: 0,
             elevation: 0,
             height: 120,
           },
           headerTintColor: colors.darkBlue,
           headerLeftContainerStyle: {
-            paddingHorizontal: 10
+            paddingHorizontal: 10,
           },
           headerRightContainerStyle: {
-            paddingHorizontal: 25
+            paddingHorizontal: 25,
           },
           headerRight: () => (
-            <Profile 
+            <Profile
               img={avatar}
-              imgStyle={{resizeMode: "cover"}}
+              imgStyle={{ resizeMode: "cover" }}
               imgContainerStyle={{
-                backgroundColor: colors.lightBlue
+                backgroundColor: colors.lightBlue,
               }}
             />
-          )
+          ),
         }}
         initialRouteName="Home"
       >
-        <Stack.Screen 
-          name='Welcome'
+        <Stack.Screen
+          name="Welcome"
           component={Welcome}
-          options={{headerShown: false}}
+          options={{ headerShown: false }}
         />
-        <Stack.Screen 
-          name='Home'
+        <Stack.Screen
+          name="Home"
           component={Home}
           options={{
             headerTitle: (props) => (
-              <Greeting 
+              <Greeting
                 mainText="Hey JC!"
                 secondText="Welcome again"
                 {...props}
@@ -68,7 +68,7 @@ const RootStack: FC = () => {
         />
       </Stack.Navigator>
     </NavigationContainer>
-  )
-}
+  );
+};
 
-export default RootStack
+export default RootStack;
