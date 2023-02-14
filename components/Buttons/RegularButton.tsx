@@ -2,7 +2,7 @@ import { FC } from 'react';
 import styled from 'styled-components/native';
 
 import { colors } from '../../theme/colors';
-import { RegularText } from '../Texts/RegularText';
+import { RegularText } from '../Texts';
 
 import { ButtonProps } from './types';
 

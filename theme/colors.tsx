@@ -6,5 +6,5 @@ export const colors = {
   gray: '#d1d5db',
   grayLight: '#f3f4f6',
   grayDark: '#4b5563',
-  accent: '#fbcd77,'
+  accent: '#fbcd77',
 };
