@@ -1,17 +1,20 @@
 import { FC } from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
-import Welcome from "../screens/Welcome";
-import Home from "../screens/Home";
+import { Ionicons } from '@expo/vector-icons';
+import { Welcome, Home, Balance } from "../screens";
+
 import { colors } from "../theme/colors";
 import Greeting from "../components/Header/Greeting";
 import Profile from "../components/Header/Profile";
 
 import avatar from "../assets/avatar/avatar.png";
+import { CardProps } from "../components/Cards/types";
 
 export type RootStackProps = {
   Welcome: undefined;
   Home: undefined;
+  Balance: CardProps
 };
 
 const Stack = createStackNavigator<RootStackProps>();
@@ -46,7 +49,7 @@ const RootStack: FC = () => {
             />
           ),
         }}
-        initialRouteName="Home"
+        initialRouteName="Welcome"
       >
         <Stack.Screen
           name="Welcome"
@@ -65,6 +68,25 @@ const RootStack: FC = () => {
               />
             ),
           }}
+        />
+        <Stack.Screen 
+          name="Balance"
+          component={Balance}
+          options={({route}) => ({
+            headerTitle: route?.params?.alias,
+            headerTitleAlign: 'center',
+            headerBackImage: (props) => (
+              <Ionicons
+                {...props} 
+                name="chevron-back"
+                size={25}
+                color={colors.darkBlue}
+              />
+            ),
+            headerLeftContainerStyle: {
+              paddingLeft: 0,
+            }
+          })}
         />
       </Stack.Navigator>
     </NavigationContainer>

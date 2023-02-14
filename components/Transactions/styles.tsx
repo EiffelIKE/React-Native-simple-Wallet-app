@@ -10,6 +10,7 @@ export const TransactionRow = styled.View`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  margin-top: 5px;
   width: 100%;
 `
 

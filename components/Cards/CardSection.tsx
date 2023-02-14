@@ -21,7 +21,7 @@ const CardSection: FC<CardSectionProps> = (props) => {
         alignItems: 'center',
       }}
       keyExtractor={({id}: any) => id.toString()}
-      renderItem={({item}: any) => <Card {...item} />}
+      renderItem={({item}: any) => <Card {...item} onPress={props.onPress}/>}
     />
   )
 }
