@@ -5,17 +5,18 @@ import { Ionicons } from "@expo/vector-icons";
 import { RegularButton } from "../Buttons/RegularButton";
 import { colors } from "../../theme/colors";
 import { RegularText } from "../Texts";
+import { ButtonSectionProps } from "./types";
 
 const ButtonSectionBg = styled.View`
   width: 100%;
   align-items: center;
-  flex: 2;
+  flex: 3;
 `;
 
-const ButtonSection: FC = () => {
+const ButtonSection: FC<ButtonSectionProps> = ({onPress}) => {
   return (
     <ButtonSectionBg>
-      <RegularButton btnStyles={{ width: "50%", marginTop: 10 }} onPress={() => {}}>
+      <RegularButton btnStyles={{ width: "50%", marginTop: 10 }} onPress={() => onPress()}>
         Cancel <Ionicons size={17} name="card" color={colors.white} />
       </RegularButton>
       <RegularText
